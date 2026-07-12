@@ -1,7 +1,7 @@
 /**
  * Referenciar/linkar os elementos do Hmtl com js
  * */
-let listElement = document.querySelector("#divListaDeTarefas ul");
+let listElement = document.querySelector("#divListaDeTarefasDescricao ul");
 let inputElement = document.querySelector("#divListaDeTarefas input");
 let buttonElement = document.querySelector("#divListaDeTarefas button");
 
@@ -50,7 +50,7 @@ renderizarTarefas();
 function adicionarTarefa() {
   //Validar se o usuário digitou algo no input
   if (inputElement.value === "" || inputElement.value === null) {
-    alert("Necessário preencher campo com a tarefa desejada.");
+    alert("Obrigatório preencher campo com a tarefa desejada!");
     return false;
   } else {
     let novaTarefa = inputElement.value;
@@ -63,6 +63,8 @@ function adicionarTarefa() {
     renderizarTarefas();
 
     salvarListaDeTarefas();
+
+    inputElement.focus();
   }
 }
 

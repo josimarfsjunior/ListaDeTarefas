@@ -1,0 +1,76 @@
+img#imagem_taskedit {
+  width: 250px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1#txtTitulo {
+  text-align: center;
+  color: rgb(2, 96, 119);
+  font-size: 50px;
+  margin-top: -25px;
+}
+
+h3#txtDescricaoTitulo {
+  text-align: center;
+  color: rgb(2, 96, 119);
+  font-size: 20px;
+  margin-top: -40px;
+}
+
+div#divListaDeTarefas {
+  margin-top: 30px;
+  border: 2px solid;
+  border-color: rgb(3, 160, 199);
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center; /* Centraliza na vertical */
+}
+input {
+  width: 65%;
+  height: 25px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+  color: rgb(2, 96, 119);
+  text-align: center;
+}
+button {
+  margin-left: 20px;
+  width: 15%;
+  height: 30px;
+  font-size: large;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: rgb(2, 153, 191);
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+}
+
+div#divListaDeTarefasDescricao {
+  margin-left: 20px;
+  height: 30px;
+  font-size: large;
+  font-weight: 700;
+  color: rgb(1, 72, 90);
+  line-height: 1.8;
+}
+
+div#divListaDeTarefasDescricao a {
+  background-color: rgb(2, 153, 191);
+  border-radius: 8px;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: medium;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100px;
+  padding: 3px;
+}

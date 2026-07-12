@@ -3,14 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de Tarefas Diárias</title>
+    <link rel="stylesheet" href="/ListaDeTarefas/src/Styles/style.css" />
+    <title>Lista de tarefas diárias</title>
   </head>
   <body>
+    <img
+      id="imagem_taskedit"
+      src="/ListaDeTarefas/src/img/Master-Task-List-removebg-preview.png"
+      alt="imagem_taskedit"
+    />
+    <h1 id="txtTitulo">Lista de tarefas diárias</h1>
+    <h3 id="txtDescricaoTitulo">
+      Organize suas tarefas em uma lista e, conforme for concluindo cada uma,
+      exclua-a para manter tudo organizado.
+    </h3>
     <div id="divListaDeTarefas">
       <input type="text" placeholder="Digite a tarefa a ser realizada" />
-
       <button>Registrar</button>
-
+    </div>
+    <div id="divListaDeTarefasDescricao">
       <ul></ul>
     </div>
     <script src="/ListaDeTarefas/src/BackEnd/script.js"></script>
