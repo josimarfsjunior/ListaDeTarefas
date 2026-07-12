@@ -8,7 +8,7 @@ let buttonElement = document.querySelector("#divListaDeTarefas button");
 /**
  * Arry criado para guardar as tarefas criadas
  */
-let listaDeTarefas = [];
+let listaDeTarefas = JSON.parse(localStorage.getItem("@listaDeTarefas")) || [];
 
 //Função para apresentar a lista de tarefas
 function renderizarTarefas() {
@@ -43,6 +43,9 @@ function renderizarTarefas() {
   });
 }
 
+//Chamando a função de Renderizar a pagina ao iniciar a pagina
+renderizarTarefas();
+
 //Função para adionar novas tarefas
 function adicionarTarefa() {
   //Validar se o usuário digitou algo no input
@@ -58,6 +61,8 @@ function adicionarTarefa() {
     inputElement.value = "";
 
     renderizarTarefas();
+
+    salvarListaDeTarefas();
   }
 }
 
@@ -72,4 +77,15 @@ function excluirTarefa(posicaoTarefaCriada) {
 
   //Após excluir a tarefa, é necessário renderizar a lista novamente no HTML
   renderizarTarefas();
+  salvarListaDeTarefas();
+}
+
+/**
+ * Função para salvar localmente a lista de tarefas no LOCAL STORAGE
+ * LOCAL STORAGE -> O Local Storage (ou Armazenamento Local) é um recurso
+ * do navegador web que permite salvar dados diretamente no computador ou dispositivo do usuário
+ */
+
+function salvarListaDeTarefas() {
+  localStorage.setItem("@listaDeTarefas", JSON.stringify(listaDeTarefas));
 }
